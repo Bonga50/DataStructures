@@ -15,24 +15,16 @@ namespace DataStructures.Using_Lists
             Console.WriteLine("First test");
            nums.Add(7);
            nums.Insert(2, 5);
-            foreach (int i in nums)
-            {
-                Console.WriteLine(i);
-            }
-            Console.WriteLine("Second test");
+            feaculMatter(nums);
+             Console.WriteLine("Second test");
 
             nums.Insert(0, 1);
-            foreach (int i in nums)
-            {
-                Console.WriteLine(i);
-            }
+            feaculMatter(nums);
+
 
             Console.WriteLine("Third test");
             nums.RemoveAt(nums.Count-2);
-            foreach (int i in nums)
-            {
-                Console.WriteLine(i);
-            }
+            feaculMatter(nums);
             Console.WriteLine("Sum :"+ SumOf(nums));
 
             Console.ReadLine();
@@ -42,7 +34,13 @@ namespace DataStructures.Using_Lists
 
             int result = 0;
             result = nums.Sum();
-        return result; 
+            return result; 
+        }
+        public static void feaculMatter(List<int> nums) {
+            foreach (int i in nums)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
