@@ -74,20 +74,32 @@ namespace DataStructures.Using_Lists
                 }
             }
             int avg = sum/odds;
-            Console.WriteLine("Avarage of even "+avg);
+            Console.WriteLine("Avarage of odd "+avg);
             
 
         }
 
         public static void MultiplesOfThree(List<int> nums) {
-            foreach (var item in nums)
+            foreach (int item in nums)
             {
                 if (item % 3 == 0)
                 {
-                    Console.WriteLine(item+ ", ");
+                    Console.Write(item+ ", ");
                 }
             }
             
+        }
+
+        static string CheckNum(int x) {
+            
+            return x % 2 == 0 ? "even" : x % 3 == 0 ? "Multipe of three":"Odd"; 
+        }
+
+
+        static bool CheckNum2(int x)
+        {
+            
+            return x % 2 == 0;
         }
 
 
