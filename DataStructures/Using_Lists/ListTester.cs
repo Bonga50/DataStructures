@@ -11,11 +11,11 @@ namespace DataStructures.Using_Lists
     {
         static void Main(string[] args)
         {
-            List<int> nums = new List<int>() { 2,4,6};
-            Console.WriteLine("First test");
-           nums.Add(7);
-           nums.Insert(2, 5);
-            feaculMatter(nums);
+            List<int> nums = new List<int>() { 2,3,4,6};
+             Console.WriteLine("First test");
+             nums.Add(7);
+             nums.Insert(2, 5);
+             feaculMatter(nums);
              Console.WriteLine("Second test");
 
             nums.Insert(0, 1);
@@ -27,6 +27,10 @@ namespace DataStructures.Using_Lists
             feaculMatter(nums);
             Console.WriteLine("Sum :"+ SumOf(nums));
 
+            Console.WriteLine("Does the number 4 exist = "+Exists(nums,4));
+            Console.WriteLine("The sum of all even"+ SumsAllEven(nums));
+            OddAvarage(nums);
+            MultiplesOfThree(nums);
             Console.ReadLine();
         }
 
@@ -42,5 +46,50 @@ namespace DataStructures.Using_Lists
                 Console.WriteLine(i);
             }
         }
+
+        public static bool Exists(List<int> nums, int x) {
+            return nums.Contains(x);
+        }
+
+        public static double SumsAllEven(List<int> nums) {
+            double result = 0;
+            for (int i = 0; i < nums.Count; i++)
+            {
+                if (nums[i] % 2 == 0)
+                {
+                    result += nums[i];
+                }
+            }
+            return result;
+        }
+        public static void OddAvarage(List<int> nums) {
+            int odds = 0;
+            int sum= 0;
+            for (int i = 0; i < nums.Count; i++)
+            {
+                if (nums[i]%3==0)
+                {
+                    odds += 1;
+                    sum += nums[i];
+                }
+            }
+            int avg = sum/odds;
+            Console.WriteLine("Avarage of even "+avg);
+            
+
+        }
+
+        public static void MultiplesOfThree(List<int> nums) {
+            foreach (var item in nums)
+            {
+                if (item % 3 == 0)
+                {
+                    Console.WriteLine(item+ ", ");
+                }
+            }
+            
+        }
+
+
     }
 }
