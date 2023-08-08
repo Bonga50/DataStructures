@@ -26,7 +26,7 @@ namespace DataStructures.SortAlgorithims
 
         }
         /// <summary>
-        /// This Is Bubble so
+        /// This Is Bubble sorting algorithim. if dont understand then chatGPT.
         /// </summary>
         /// <param name="args"></param>
         public static void SortMyBubbles(int[] args) {
